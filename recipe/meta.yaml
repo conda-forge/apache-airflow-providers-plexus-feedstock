@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-plexus" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-plexus-{{ version }}.tar.gz
-  sha256: 0730c16d48b8b08f0e0e8f9cae5c0080dde7b62a8b1e4f9d8380d300b13f6e41
+  sha256: c7a399b375b4ceaabd9e1f2fc1a41839bc058ce4acfcc78be8b55bb33b3ab768
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - arrow >=0.16.0
     - python >=3.6
 
