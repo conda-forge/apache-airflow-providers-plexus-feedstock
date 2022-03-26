@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-plexus" %}
-{% set version = "2.0.2" %}
-
+{% set version = "2.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,20 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-plexus-{{ version }}.tar.gz
-  sha256: e26de6304a587b47e02ca420a3ef0f7b216befddd66ee3509e8334b2a8c41da2
+  sha256: e6d2c06641ebd17b17005607f2e93c5bb2e712f83e6f671c836602336db23c9b
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
     - arrow >=0.16.0
 
@@ -36,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Plexus for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-plexus package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-plexus/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
