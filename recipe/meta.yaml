@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-plexus" %}
-{% set version = "2.0.4" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-plexus-{{ version }}.tar.gz
-  sha256: e6d2c06641ebd17b17005607f2e93c5bb2e712f83e6f671c836602336db23c9b
+  sha256: 9e93b32e65749beecb27488250b21c7935d12e5a862a016417d2b5350ec55006
 
 build:
   noarch: python
