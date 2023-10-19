@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-plexus" %}
-{% set version = "3.2.2" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-plexus-{{ version }}.tar.gz
-  sha256: 6fc9b6b1d8a8006c8294e9452734bd0f13fb44032ff04bdaaffe4140d80d96b7
+  sha256: 9aa13730f6439bcd270e84e2d908a650dd84ab7af05a2dacadf391a10354e8b3
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.4.0
+    - apache-airflow >=2.5.0
     - arrow >=0.16.0
 
 test:
