@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-plexus" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-plexus-{{ version }}.tar.gz
-  sha256: 9aa13730f6439bcd270e84e2d908a650dd84ab7af05a2dacadf391a10354e8b3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2cabe15e451dd5014aec7b2f73f814e8c635934bfec755e49b13ccc0fdd7a9d3
 
 build:
   noarch: python
@@ -16,30 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - arrow >=0.16.0
 
 test:
   imports:
     - airflow.providers.plexus
-    - airflow.providers.plexus.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-plexus package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-plexus for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/plexus/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-plexus/stable/index.html
   dev_url: https://github.com/apache/airflow/
