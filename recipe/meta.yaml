@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_plexus-{{ version }}.tar.gz
   sha256: 43a2916be465d9e6cf464e0449fc53703a16618cd751e0d9411cf029d2cb7a35
 
 build:
